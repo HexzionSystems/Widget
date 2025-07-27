@@ -1,4 +1,4 @@
-import { ChevronRight, UserPlus } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function AddProfile() {
