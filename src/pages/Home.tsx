@@ -22,9 +22,9 @@ function Home() {
         <div className="flex justify-between items-center px-6 pt-10">
           <img src={Logo} alt="Kapes Logo" className="w-28 h-auto" />
           <div className="flex -space-x-2">
-            <img src="/avatar1.png" className="w-10 h-10 rounded-full border-2 border-white" />
-            <img src="/avatar2.png" className="w-10 h-10 rounded-full border-2 border-white" />
-            <img src="/avatar3.png" className="w-10 h-10 rounded-full border-2 border-white" />
+            <img src={Classroom} className="w-10 h-10 rounded-full border-2 border-white" />
+            <img src={Classroom} className="w-10 h-10 rounded-full border-2 border-white" />
+            <img src={Classroom} className="w-10 h-10 rounded-full border-2 border-white" />
           </div>
         </div>
 
