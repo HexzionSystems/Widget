@@ -38,7 +38,7 @@ function Home() {
         <div className="px-6 pt-6 space-y-4">
           {/* Recent Profile Box */}
           <div
-            onClick={() => navigate('/profiles')}
+            onClick={() => navigate('/recommendation')}
             className="bg-white rounded-xl shadow-md p-4 flex flex-col space-y-2 border border-[#F97769] cursor-pointer hover:shadow-lg transition"
           >
             <p className="text-sm font-semibold text-gray-800">Recent Profile</p>

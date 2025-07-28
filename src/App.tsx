@@ -3,6 +3,7 @@ import BottomNavigator from './components/BottomNavigator';
 import Home from './pages/Home';
 import AddProfile from './pages/AddProfile';
 import SmartSizeFinder from './pages/SmartSizeFinder';
+import Recommendation from './pages/Recommendation';
 
 export default function App() {
   const location = useLocation();
@@ -17,6 +18,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/profiles" element={<AddProfile />} />
               <Route path="/finder" element={<SmartSizeFinder />} />
+              <Route path="/recommendation" element={<Recommendation />} />
+
 
           </Routes>
         </div>

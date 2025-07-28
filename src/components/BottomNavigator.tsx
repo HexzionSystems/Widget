@@ -6,7 +6,7 @@ export default function BottomNavigator() {
   const location = useLocation();
 
   const isHome = location.pathname === "/";
-  const isProfile = location.pathname.startsWith("/profiles") || location.pathname.startsWith("/finder");
+  const isProfile = location.pathname.startsWith("/profiles") || location.pathname.startsWith("/finder")  || location.pathname.startsWith("/recommendation");
 
   return (
     <div className="w-full bg-white py-2 flex justify-around">
