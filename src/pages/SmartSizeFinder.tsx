@@ -1,0 +1,135 @@
+import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
+
+export default function SmartSizeFinder() {
+  return (
+    <motion.div
+      className="flex flex-col h-full w-full font-figtree bg-white"
+      initial={{ x: 300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: -300, opacity: 0 }}
+      transition={{ duration: 0.4 }}
+    >
+      {/* Header */}
+      <div className="bg-[#F97769] text-white rounded-t-3xl px-6 py-5 flex items-center justify-between shadow-md">
+        <div className="text-white font-bold text-2xl">K</div>
+        <h2 className="text-lg font-semibold">Smart Size Finder</h2>
+        <div className="w-6" />
+      </div>
+
+      {/* Step Progress Bar */}
+      <div className="bg-white px-6 pt-8">
+        <div className="flex justify-between text-xs font-medium text-gray-500 tracking-tight">
+          <div className="flex flex-col items-start w-1/3">
+            <span className="text-black font-semibold whitespace-nowrap">Enter Basic Info</span>
+            <div className="mt-0.5 h-1 w-26 bg-green-500 rounded-full" />
+          </div>
+          <div className="flex flex-col items-start w-1/3">
+            <span className="whitespace-nowrap leading-tight">Choose Current Size</span>
+            <div className="mt-0.5 h-1 w-26 bg-gray-200 rounded-full" />
+          </div>
+          <div className="flex flex-col items-start w-1/3">
+            <span className="whitespace-nowrap leading-tight">Fit preferences</span>
+            <div className="mt-0.5 h-1 w-26 bg-gray-200 rounded-full" />
+          </div>
+        </div>
+      </div>
+
+      {/* Form Section */}
+      <div className="px-6 py-7 flex flex-col flex-grow justify-between">
+        <div>
+          <h3 className="text-lg font-semibold text-gray-800">Tell us about your child</h3>
+
+          <form className="space-y-4 pt-4 text-sm">
+            {/* Name */}
+            <div>
+              <label className="block font-semibold text-[#2E1E5C] mb-2">
+                Name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Name"
+                className="w-full border border-[#eee] rounded-xl px-4 py-3 outline-none text-[#2E1E5C] placeholder-gray-400 shadow-sm focus:ring-2 focus:ring-[#F97769]"
+              />
+            </div>
+
+            {/* Gender */}
+            <div>
+              <label className="block font-semibold text-[#2E1E5C] mb-2 text-sm">
+                Gender <span className="text-red-500">*</span>
+              </label>
+              <div className="relative">
+                <select
+                  className="w-full border border-[#E6E6E6] rounded-xl px-4 py-3 pr-12 text-[#2E1E5C] text-sm shadow-sm focus:ring-2 focus:ring-[#F97769] appearance-none bg-white"
+                >
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center space-x-2 pointer-events-none">
+                  <div className="w-px h-5 bg-[#E6E6E6]" />
+                  <ChevronDown className="w-4 h-4 text-black" />
+                </div>
+              </div>
+            </div>
+
+            {/* Age */}
+            <div>
+              <label className="block font-semibold text-[#2E1E5C] mb-2 text-sm">
+                Age <span className="text-red-500">*</span>
+              </label>
+              <div className="relative">
+                <select
+                  className="w-full border border-[#E6E6E6] rounded-xl px-4 py-3 pr-12 text-[#2E1E5C] text-sm shadow-sm focus:ring-2 focus:ring-[#F97769] appearance-none bg-white"
+                >
+                  <option value="">Select Age</option>
+                  <option value="3">3 Years</option>
+                  <option value="4">4 Years</option>
+                  <option value="5">5 Years</option>
+                </select>
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center space-x-2 pointer-events-none">
+                  <div className="w-px h-5 bg-[#E6E6E6]" />
+                  <ChevronDown className="w-4 h-4 text-black" />
+                </div>
+              </div>
+            </div>
+
+            {/* Height & Weight */}
+            <div className="flex gap-4 mt-3">
+              <div className="flex-1">
+                <label className="block font-semibold text-[#2E1E5C] mb-2">
+                  Height (cm) <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="120cm"
+                  className="w-full border border-[#eee] rounded-xl px-4 py-3 outline-none text-[#2E1E5C] placeholder-gray-400 shadow-sm focus:ring-2 focus:ring-[#F97769]"
+                />
+              </div>
+              <div className="flex-1">
+                <label className="block font-semibold text-[#2E1E5C] mb-2">
+                  Weight (kg) <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="60kg"
+                  className="w-full border border-[#eee] rounded-xl px-4 py-3 outline-none text-[#2E1E5C] placeholder-gray-400 shadow-sm focus:ring-2 focus:ring-[#F97769]"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+
+        {/* Continue Button */}
+        <div className="pt-6">
+          <button
+            type="submit"
+            className="w-full bg-[#F97769] text-white text-sm font-semibold py-3 rounded-xl shadow-md hover:bg-[#f86555] transition-all"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </motion.div>
+  );
+}

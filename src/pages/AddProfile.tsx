@@ -1,7 +1,10 @@
 import { ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 export default function AddProfile() {
+  const navigate = useNavigate();
+
   const profiles = [
     { name: 'Emily Rose', size: '8-9' },
     { name: 'Emily Rose', size: '8-9' },
@@ -45,8 +48,10 @@ export default function AddProfile() {
 
         {/* Add New Profile Button — inside scroll area, below profiles */}
         <div className="pt-35 flex justify-center">
-  <button className="max-w-[200px] bg-[#F97769] text-white text-sm font-medium py-3 px-5 rounded-xl flex items-center justify-center gap-2 shadow-md">
-            Add New Profile
+<button
+  onClick={() => navigate('/finder')}
+  className="max-w-[200px] bg-[#F97769] text-white text-sm font-medium py-3 px-5 rounded-xl flex items-center justify-center gap-2 shadow-md"
+>            Add New Profile
             <ChevronRight className="w-4 h-4" />
           </button>
         </div>

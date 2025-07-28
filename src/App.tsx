@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import BottomNavigator from './components/BottomNavigator';
 import Home from './pages/Home';
 import AddProfile from './pages/AddProfile';
+import SmartSizeFinder from './pages/SmartSizeFinder';
 
 export default function App() {
   const location = useLocation();
@@ -15,6 +16,8 @@ export default function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/profiles" element={<AddProfile />} />
+              <Route path="/finder" element={<SmartSizeFinder />} />
+
           </Routes>
         </div>
 
