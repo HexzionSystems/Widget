@@ -22,22 +22,22 @@ export default function SmartSizeFinder() {
       transition={{ duration: 0.4 }}
     >
       {/* Header */}
-      <div className="bg-[#F97769] text-white rounded-t-3xl px-6 py-5 flex items-center justify-between shadow-md">
-        <div className="text-white font-bold text-2xl">K</div>
-        <h2 className="text-lg font-semibold">Smart Size Finder</h2>
+      <div className="bg-[#F97769] text-white rounded-t-3xl px-6 py-4 flex items-center justify-between shadow-md">
+        <div className="text-white font-bold text-xl">K</div>
+        <h2 className="text-base font-semibold">Smart Size Finder</h2>
         <div className="w-6" />
       </div>
 
       {/* Step Progress Bar */}
-      <div className="bg-white px-6 pt-8">
-        <div className="flex justify-between text-xs font-medium text-gray-500 tracking-tight">
-          {['Enter Basic Info', 'Choose Current Size', 'Fit preferences'].map((label, index) => (
-            <div key={index} className="flex flex-col items-start w-1/3">
-              <span className={`whitespace-nowrap ${step === index + 1 ? 'text-black font-semibold' : ''}`}>
+      <div className="px-4 pt-4 pb-2">
+        <div className="flex justify-between items-center text-[11px] font-medium text-gray-500">
+          {['Enter Basic Info', 'Choose Size', 'Fit Preference'].map((label, index) => (
+            <div key={index} className="flex-1 px-1 text-center">
+              <div className={`${step === index + 1 ? 'text-black font-semibold' : ''}`}>
                 {label}
-              </span>
+              </div>
               <div
-                className={`mt-0.5 h-1 w-26 rounded-full ${
+                className={`mt-1 h-1 rounded-full ${
                   step >= index + 1 ? 'bg-green-500' : 'bg-gray-200'
                 }`}
               />
@@ -47,9 +47,11 @@ export default function SmartSizeFinder() {
       </div>
 
       {/* Step Content */}
-      {step === 1 && <Step1 onNext={() => setStep(2)} />}
-      {step === 2 && <Step2 onNext={() => setStep(3)} onBack={() => setStep(1)} />}
-      {step === 3 && <Step3 onBack={() => setStep(2)} onNext={handleFinalNext} />}
+      <div className="flex-1 overflow-hidden">
+        {step === 1 && <Step1 onNext={() => setStep(2)} />}
+        {step === 2 && <Step2 onNext={() => setStep(3)} onBack={() => setStep(1)} />}
+        {step === 3 && <Step3 onBack={() => setStep(2)} onNext={handleFinalNext} />}
+      </div>
     </motion.div>
   );
 }

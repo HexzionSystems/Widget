@@ -1,6 +1,6 @@
 import { ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import Classroom from '../assets/Screenshot (8).png';
+import Classroom from '../assets/wallpaper.jpg';
 import Logo from '../assets/logo.png';
 import { motion } from 'framer-motion';
 import Icon from '../assets/icon(orange).png'
