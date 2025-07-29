@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Step1 from './Step1';
 import Step2 from './Step2';
 import Step3 from './Step3';
-
+import Logo from '../assets/Vector.png'
 export default function SmartSizeFinder() {
   const [step, setStep] = useState(1);
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ export default function SmartSizeFinder() {
     >
       {/* Header */}
       <div className="bg-[#F97769] text-white rounded-t-3xl px-6 py-4 flex items-center justify-between shadow-md">
-        <div className="text-white font-bold text-xl">K</div>
+          <img src={Logo} alt="Kapes Logo" className="w-4 h-auto" />
         <h2 className="text-base font-semibold">Smart Size Finder</h2>
         <div className="w-6" />
       </div>

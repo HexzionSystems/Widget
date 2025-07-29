@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Circle from '../assets/star.png';
+import Logo from '../assets/Vector.png'
 
 function CircularProgress({ progress, color }: { progress: number; color: string }) {
   const radius = 15.9155;
@@ -15,7 +16,7 @@ function CircularProgress({ progress, color }: { progress: number; color: string
   }, [offset]);
 
   return (
-    <div className="relative w-10 h-10">
+    <div className="relative w-12 h-12">
       <svg className="w-full h-full" viewBox="0 0 36 36">
         <path
           d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831"
@@ -58,13 +59,13 @@ export default function Recommendation() {
     >
       {/* Header */}
       <div className="bg-[#F97769] text-white rounded-t-3xl px-6 py-4 flex items-center justify-between shadow-md">
-        <div className="text-white font-bold text-xl">K</div>
+          <img src={Logo} alt="Kapes Logo" className="w-4 h-auto" />
         <h2 className="text-base font-semibold">Smart Size Finder</h2>
         <div className="w-6" />
       </div>
 
       {/* Content */}
-      <div className="flex-1 flex flex-col overflow-hidden px-8 pt-10 pb-4 space-y-3">
+<div className="flex-1 overflow-y-auto sm:overflow-visible scrollbar-hide px-8 pt-10 pb-4 space-y-3">
         {/* Badge */}
         <div className="flex justify-center">
           <div className="bg-[#3DD598] px-3 py-1.5 rounded-xl inline-flex items-center space-x-2 shadow-sm">

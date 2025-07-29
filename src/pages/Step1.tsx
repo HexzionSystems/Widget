@@ -2,11 +2,12 @@ import { ChevronDown } from 'lucide-react';
 
 export default function Step1({ onNext }: { onNext: () => void }) {
   return (
-    <div className="px-5 pt-6 pb-4 flex flex-col flex-grow font-figtree">
-      <div className="flex-1 overflow-hidden">
+    <div className="flex flex-col h-full font-figtree px-5 pt-6 pb-4">
+      {/* Make this section scrollable only on small screens */}
+<div className="flex-1 overflow-y-auto sm:overflow-visible scrollbar-hide">
         <h3 className="text-base font-semibold text-gray-800 mb-3">Tell us about your child</h3>
 
-        <form className="space-y-4 text-sm overflow-y-auto max-h-[60vh] pr-1">
+        <form className="space-y-4 text-sm pr-1">
           {/* Name */}
           <div>
             <label className="block font-medium text-[#2E1E5C] mb-1.5 text-sm">
@@ -84,18 +85,18 @@ export default function Step1({ onNext }: { onNext: () => void }) {
               />
             </div>
           </div>
-        </form>
-      </div>
 
-      {/* Continue Button */}
-      <div className="pt-5">
-        <button
-          type="button"
-          onClick={onNext}
-          className="w-full bg-[#F97769] text-white text-sm font-semibold py-3 rounded-xl shadow-md hover:bg-[#f86555] transition-all"
-        >
-          Continue
-        </button>
+          {/* Continue Button */}
+          <div className="pt-6 pb-2">
+            <button
+              type="button"
+              onClick={onNext}
+              className="w-full bg-[#F97769] text-white text-sm font-semibold py-3 rounded-xl shadow-md hover:bg-[#f86555] transition-all"
+            >
+              Continue
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
