@@ -1,69 +1,103 @@
-# React + TypeScript + Vite
+# 🧠 Smart Size Recommendation Widget – Kxpos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A seamless, AI-enhanced size recommendation solution designed to improve user confidence and reduce returns in school uniform e-commerce. Built for **Kxpos**’ Shopify storefront, this widget leverages user measurements and historical fit data to provide personalized size suggestions across mobile, web, and chatbot interfaces.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔍 Overview
 
-## Expanding the ESLint configuration
+This project includes:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🧑‍💬 **Chatbot Screens** – Engaging conversational UI guiding users through smart size selection  
+- 🖥️ **Web View** – Desktop-optimized recommendation experience integrated with the product detail page  
+- 📱 **Mobile View** – Lightweight and intuitive interface for handheld devices  
+- ✅ All views are marked **Ready for Dev**, following finalized Figma designs.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ✨ Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- ✅ **AI-Powered Fit Recommendations**  
+  Based on age, height, weight, and gender using match scoring logic.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- 🎯 **Confidence Score Visualization**  
+  Displayed via animated circular progress indicator with match explanation.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- 🔁 **Alternate Size Suggestions**  
+  Users can view snugger or looser fit options with confidence levels.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- 👪 **Multi-Child Profile Support**  
+  Store and manage multiple child profiles under one session.
+
+- 🛒 **Cart Integration**  
+  Add recommended sizes directly to Shopify cart with quantity selection.
+
+- 🔄 **Start Over Option**  
+  Easily reset flow and start a new recommendation.
+
+---
+
+## 📁 Project Structure
+
+/
+├── components/
+│ ├── CircularProgress.tsx # Circular match score indicator
+│ ├── Recommendation.tsx # Main result screen with add-to-cart
+│ ├── AddProfile.tsx # Multi-profile selector
+│ ├── Finder.tsx # Measurement input form
+│ └── BottomNavigator.tsx # Shared bottom navigation component
+│
+├── assets/ # Icons and style assets
+├── routes/ # Page routes and transitions
+├── App.tsx # Route controller
+├── index.tsx # Vite + React entry point
+└── README.md # Project documentation
+
+
+
+---
+
+## 🧩 Tech Stack
+
+- **Framework:** React (with Vite)
+- **Animation:** Framer Motion
+- **Navigation:** React Router
+- **Design System:** TailwindCSS + Lucide Icons
+- **Data Storage:** Local state (with potential to extend to Firebase or Shopify metafields)
+- **Platform:** Shopify integration-ready
+
+---
+
+## 🖼️ Screens Overview
+
+### 🔸 Chatbot Screens
+Guides the user via conversational steps with validation and results.
+
+### 🔸 Web View
+Integrated directly within Shopify’s desktop product page, aligned to UX best practices.
+
+### 🔸 Mobile View
+Optimized for handheld usage with larger tap targets, simplified navigation, and fast interactions.
+
+---
+
+## 🧪 Status
+
+- ✅ UI Screens (All views) – *Ready for development*
+- ✅ Component Code – *Implemented and tested*
+- 🔜 Backend Integration – *Optional next phase for profile saving, calendar sync, or real-time sizing data.*
+
+---
+
+## 🚀 Getting Started (Dev)
+
+```bash
+# 1. Clone the project
+git clone https://github.com/yourusername/kxpos-size-widget.git
+
+# 2. Install dependencies
+cd kxpos-size-widget
+npm install
+
+# 3. Run development server
+npm run dev
