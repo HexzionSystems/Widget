@@ -1,11 +1,16 @@
+// tailwind.config.js
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        figtree: ['Figtree', 'sans-serif'],
+      },
+    },
   },
-  safelist: ['scrollbar-none'], // ✅ THIS LINE IS IMPORTANT
+  safelist: ['scrollbar-none'],
   plugins: [],
 }
