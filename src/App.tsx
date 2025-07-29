@@ -9,7 +9,7 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <div className="flex justify-center items-start min-h-screen bg-white px-2 mt-2">
+    <div className="flex justify-center items-start min-h-screen bg-white px-2 mt-5">
       <div className="w-full max-w-[400px] h-[85vh] rounded-3xl shadow-xl flex flex-col overflow-hidden">
         
         {/* Scrollable content section */}
