@@ -73,12 +73,31 @@ function Home() {
         <div className="px-6 pt-5">
           <div className="bg-white rounded-xl shadow-md border border-gray-200 p-3">
             <img src={Classroom} alt="Preview" className="w-full h-40 object-cover rounded-lg" />
+             <div className="px-2 py-5">
+      <p className="text-sm font-bold text-black mb-1">
+        Get 50% OFF on all school uniforms.
+      </p>
+      <p className="text-xs text-gray-600 leading-snug">
+        Perfect fit. Premium quality. Unbeatable price. <br />
+        Let us know your child’s age and size, and we’ll take care of the rest!
+      </p>
+    </div>
           </div>
         </div>
 
         <div className="px-6 pt-5 pb-10">
           <div className="bg-white rounded-xl shadow-md border border-gray-200 p-3">
             <img src={Classroom} alt="Preview" className="w-full h-40 object-cover rounded-lg" />
+
+             <div className="px-2 py-5">
+      <p className="text-sm font-bold text-black mb-1">
+        Get 50% OFF on all school uniforms.
+      </p>
+      <p className="text-xs text-gray-600 leading-snug">
+        Perfect fit. Premium quality. Unbeatable price. <br />
+        Let us know your child’s age and size, and we’ll take care of the rest!
+      </p>
+    </div>
           </div>
         </div>
       </div>
