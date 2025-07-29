@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Classroom from '../assets/Screenshot (8).png';
 import Logo from '../assets/logo.png';
 import { motion } from 'framer-motion';
+import Icon from '../assets/icon(orange).png'
 
 function Home() {
   const navigate = useNavigate();
@@ -65,7 +66,7 @@ function Home() {
               <p className="text-sm font-semibold text-gray-800">Add New Profile</p>
               <p className="text-xs text-gray-500">Create a Profile to Move Forward</p>
             </div>
-            <ChevronRight className="w-5 h-5 text-[#F97769]" />
+          <img src={Icon} alt="Kapes Logo" />
           </div>
         </div>
 

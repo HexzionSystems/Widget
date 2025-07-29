@@ -1,7 +1,7 @@
 import { ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-
+import Icons from '../assets/Icon(white).png'
 export default function AddProfile() {
   const navigate = useNavigate();
 
@@ -54,7 +54,7 @@ export default function AddProfile() {
     className="max-w-[200px] bg-[#F97769] hover:bg-[#e8564e] transition text-white text-sm font-medium py-3 px-5 rounded-xl flex items-center justify-center gap-2 shadow-md"
   >
     Add New Profile
-    <ChevronRight className="w-4 h-4" />
+    <img src={Icons} alt="Kapes Logo"  />
   </button>
 </div>
 

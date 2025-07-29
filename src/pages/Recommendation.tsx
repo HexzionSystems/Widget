@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import Circle from '../assets/star.png'
 function CircularProgress({ progress, color }: { progress: number; color: string }) {
   const radius = 15.9155;
   const circumference = 2 * Math.PI * radius;
@@ -68,9 +68,8 @@ export default function Recommendation() {
       {/* Badge */}
       <div className="flex justify-center pt-4">
         <div className="bg-[#3DD598] px-3 py-2 rounded-xl inline-flex items-center space-x-2 shadow-sm">
-          <div className="w-4 h-4 bg-white rounded-full flex items-center justify-center">
-            <div className="w-1.5 h-1.5 bg-[#F97769] rounded-full" />
-          </div>
+                    <img src={Circle} alt="Kapes Logo"  />
+
           <span className="text-white text-xs font-medium tracking-tight">
             Recommended Size: Age 8–9
           </span>
