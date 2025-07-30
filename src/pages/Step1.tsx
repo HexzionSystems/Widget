@@ -4,7 +4,7 @@ export default function Step1({ onNext }: { onNext: () => void }) {
   return (
     <div className="flex flex-col h-full font-figtree px-5 pt-6 pb-4">
       {/* Make this section scrollable only on small screens */}
-<div className="flex-1 overflow-y-auto sm:overflow-visible scrollbar-hide">
+<div className="flex-1 overflow-y-auto lg:overflow-visible scrollbar-hide">
         <h3 className="text-base font-semibold text-gray-800 mb-3">Tell us about your child</h3>
 
         <form className="space-y-4 text-sm pr-1">
