@@ -32,7 +32,7 @@ function Home() {
         {/* Heading Text */}
         <div className="px-6 pt-26">
           <h2 className="text-white text-3xl font-semibold opacity-60">Hello there.</h2>
-          <h2 className="text-white text-4xl font-bold">How can we help?</h2>
+          <h2 className="text-white text-4xl font-bold">I am your Kapes Size Assistant</h2>
         </div>
 
         {/* Profile Cards */}
@@ -59,7 +59,7 @@ function Home() {
 
           {/* Add New Profile Box */}
           <div
-            onClick={() => navigate('/profiles')}
+            onClick={() => navigate('/finder')}
             className="bg-white rounded-xl shadow-md p-6 flex items-center justify-between cursor-pointer hover:shadow-lg transition"
           >
             <div>
